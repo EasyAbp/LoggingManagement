@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>EasyAbp.LoggingManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\providers\EasyAbp.LoggingManagement.Provider.TencentCloudCls\EasyAbp.LoggingManagement.Provider.TencentCloudCls.csproj" />
+    <ProjectReference Include="..\..\EasyAbp.LoggingManagement.Application.Tests\EasyAbp.LoggingManagement.Application.Tests.csproj" />
+  </ItemGroup>
+
+</Project>

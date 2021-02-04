@@ -1,0 +1,44 @@
+@page
+@using EasyAbp.LoggingManagement.Localization
+@using EasyAbp.LoggingManagement.Web.Menus
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@model EasyAbp.LoggingManagement.Web.Pages.LoggingManagement.SystemLogs.IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<LoggingManagementResource> L
+@{
+    PageLayout.Content.Title = L["SystemLog"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:SystemLogs"].Value);
+    PageLayout.Content.MenuItemName = LoggingManagementMenus.SystemLogs;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/LoggingManagement/SystemLogs/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/LoggingManagement/SystemLogs/index.css"/>
+}
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["SystemLog"]</abp-card-title>
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="PaymentTable" class="nowrap">
+            <thead>
+            <tr>
+                <th>@L["Actions"]</th>
+                <th>@L["SystemLogLogName"]</th>
+                <th>@L["SystemLogLogValue"]</th>
+                <th>@L["SystemLogTime"]</th>
+            </tr>
+            </thead>
+        </abp-table>
+    </abp-card-body>
+</abp-card>

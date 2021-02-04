@@ -2,10 +2,11 @@
 {
     public class LoggingManagementMenus
     {
-        private const string Prefix = "EasyAbp.LoggingManagement";
+        public const string Prefix = "EasyAbp.LoggingManagement";
 
         //Add your menu items here...
         //public const string Home = Prefix + ".MyNewMenuItem";
 
+        public const string SystemLogs = Prefix + ".SystemLogs";
     }
 }

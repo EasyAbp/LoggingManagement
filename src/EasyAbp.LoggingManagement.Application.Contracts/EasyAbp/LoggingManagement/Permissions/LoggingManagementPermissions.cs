@@ -10,5 +10,10 @@ namespace EasyAbp.LoggingManagement.Permissions
         {
             return ReflectionHelper.GetPublicConstantsRecursively(typeof(LoggingManagementPermissions));
         }
+        
+        public class SystemLog
+        {
+            public const string Default = GroupName + ".SystemLogging";
+        }
     }
 }
