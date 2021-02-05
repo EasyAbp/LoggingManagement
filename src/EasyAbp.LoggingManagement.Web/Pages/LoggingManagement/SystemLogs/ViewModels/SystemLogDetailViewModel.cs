@@ -12,7 +12,7 @@ namespace EasyAbp.LoggingManagement.Web.Pages.LoggingManagement.SystemLogs.ViewM
         
         [DisabledInput]
         [Display(Name = "SystemLogLogValue")]
-        [TextArea(Rows = 5)]
+        [TextArea(Rows = 12)]
         public string LogValue { get; set; }
         
         [DisabledInput]

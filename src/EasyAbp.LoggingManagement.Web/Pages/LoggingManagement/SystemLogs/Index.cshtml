@@ -25,6 +25,12 @@
     var queryString = "@Model.QueryModel.QueryString";
     var startTime = "@Model.QueryModel.StartTime.ToString("yyyy-MM-dd HH:mm:ss.fff")";
     var endTime = "@Model.QueryModel.EndTime.ToString("yyyy-MM-dd HH:mm:ss.fff")";
+    
+    var currentDetailModalData = {
+        logName: null,
+        logValue: null,
+        time: null
+    };
 </script>
 
 <abp-card>
@@ -54,9 +60,8 @@
             <thead>
             <tr>
                 <th>@L["Actions"]</th>
-                <th>@L["SystemLogLogName"]</th>
-                <th>@L["SystemLogLogValue"]</th>
                 <th>@L["SystemLogTime"]</th>
+                <th>@L["SystemLogLogName"]</th>
             </tr>
             </thead>
         </abp-table>

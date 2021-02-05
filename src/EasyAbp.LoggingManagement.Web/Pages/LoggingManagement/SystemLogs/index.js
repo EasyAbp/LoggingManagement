@@ -24,15 +24,17 @@ $(function () {
                             {
                                 text: l('Detail'),
                                 action: function (data) {
-                                    detailModal.open({ logName: data.record.logName, logValue: data.record.logValue, time: data.record.time });
+                                    currentDetailModalData.logName = data.record.logName
+                                    currentDetailModalData.logValue = data.record.logValue
+                                    currentDetailModalData.time = data.record.time
+                                    detailModal.open();
                                 }
                             }
                         ]
                 }
             },
-            { data: "logName" },
-            { data: "logValue" },
             { data: "time" },
+            { data: "logName" },
         ]
     }));
     
