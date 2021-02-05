@@ -21,6 +21,12 @@
     <abp-style src="/Pages/LoggingManagement/SystemLogs/index.css"/>
 }
 
+<script>
+    var queryString = "@Model.QueryModel.QueryString";
+    var startTime = "@Model.QueryModel.StartTime.ToString("yyyy-MM-dd HH:mm:ss.fff")";
+    var endTime = "@Model.QueryModel.EndTime.ToString("yyyy-MM-dd HH:mm:ss.fff")";
+</script>
+
 <abp-card>
     <abp-card-header>
         <abp-row>
@@ -30,7 +36,21 @@
         </abp-row>
     </abp-card-header>
     <abp-card-body>
-        <abp-table striped-rows="true" id="PaymentTable" class="nowrap">
+        <abp-card-body>
+            <form data-ajaxForm="true" asp-page="Index">
+                <abp-input asp-for="QueryModel.QueryString"/>
+                <abp-input asp-for="QueryModel.StartTime"/>
+                <abp-input asp-for="QueryModel.EndTime"/>
+                <abp-row>
+                    <abp-column size-md="_6">
+                    </abp-column>
+                    <abp-column size-md="_6" class="text-right">
+                        <abp-button id="search-button" button-type="Primary" text="@L["Search"].Value"/>
+                    </abp-column>
+                </abp-row>
+            </form>
+        </abp-card-body>
+        <abp-table striped-rows="true" id="SystemLogTable" class="nowrap">
             <thead>
             <tr>
                 <th>@L["Actions"]</th>

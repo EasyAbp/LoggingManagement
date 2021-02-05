@@ -1,7 +1,16 @@
 {
   "culture": "zh-Hans",
   "texts": {
-    "ManageYourProfile": "管理个人资料",
-    "SamplePageMessage": "LoggingManagement模块的示例页面"
+    "Menu:LoggingManagement": "日志管理",
+    "Menu:SystemLogs": "系统日志",
+    "SystemLog": "系统日志",
+    "SystemLogLogName": "名称",
+    "SystemLogLogValue": "内容",
+    "SystemLogTime": "时间",
+    "SystemLogStartTime": "开始时间",
+    "SystemLogEndTime": "截止时间",
+    "SystemLogQueryString": "查询字符串",
+    "Search": "搜索",
+    "Detail": "查看"
   }
 }

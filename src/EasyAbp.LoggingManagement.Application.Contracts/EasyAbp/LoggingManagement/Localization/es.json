@@ -1,7 +1,16 @@
 {
   "culture": "es",
   "texts": {
-    "ManageYourProfile": "Gestiona tu perfil",
-    "SamplePageMessage": "Una página de ejemplo para el módulo LoggingManagement "
+    "Menu:LoggingManagement": "Logging management",
+    "Menu:SystemLogs": "System logs",
+    "SystemLog": "System log",
+    "SystemLogLogName": "Log name",
+    "SystemLogLogValue": "Log value",
+    "SystemLogTime": "Time",
+    "SystemLogStartTime": "Start time",
+    "SystemLogEndTime": "End time",
+    "SystemLogQueryString": "Query string",
+    "Search": "Search",
+    "Detail": "Detail"
   }
 }

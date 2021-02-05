@@ -7,7 +7,7 @@
 @{
     Layout = null;
 }
-<abp-dynamic-form abp-model="SystemLog" data-ajaxForm="true" asp-page="DetailModal">
+<abp-dynamic-form abp-model="SystemLog" data-ajaxForm="true" asp-page="DetailModal" data-check-form-on-close="false">
     <abp-modal>
         <abp-modal-header title="@L["SystemLog"].Value"></abp-modal-header>
         <abp-modal-body>
@@ -16,3 +16,10 @@
         <abp-modal-footer buttons="@(AbpModalButtons.Close)"></abp-modal-footer>
     </abp-modal>
 </abp-dynamic-form>
+
+<script>
+    $(function () {
+        var logValueInput = $("#SystemLog_LogValue")
+        logValueInput.val(JSON.stringify(JSON.parse(logValueInput.val()), null, 4))
+    })
+</script>

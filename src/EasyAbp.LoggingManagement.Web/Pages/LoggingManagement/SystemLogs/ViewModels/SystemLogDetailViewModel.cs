@@ -7,13 +7,16 @@ namespace EasyAbp.LoggingManagement.Web.Pages.LoggingManagement.SystemLogs.ViewM
     public class SystemLogDetailViewModel
     {
         [DisabledInput]
+        [Display(Name = "SystemLogLogName")]
         public string LogName { get; set; }
         
         [DisabledInput]
+        [Display(Name = "SystemLogLogValue")]
         [TextArea(Rows = 5)]
         public string LogValue { get; set; }
         
         [DisabledInput]
+        [Display(Name = "SystemLogTime")]
         public DateTime? Time { get; set; }
     }
 }

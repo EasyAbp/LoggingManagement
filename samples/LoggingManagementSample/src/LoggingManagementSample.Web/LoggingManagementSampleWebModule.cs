@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using EasyAbp.LoggingManagement;
 using EasyAbp.LoggingManagement.Provider.TencentCloudCls;
 using EasyAbp.LoggingManagement.Web;
 using Microsoft.AspNetCore.Builder;
@@ -141,6 +142,11 @@ namespace LoggingManagementSample.Web
                     options.FileSets.ReplaceEmbeddedByPhysical<LoggingManagementSampleApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}LoggingManagementSample.Application.Contracts"));
                     options.FileSets.ReplaceEmbeddedByPhysical<LoggingManagementSampleApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}LoggingManagementSample.Application"));
                     options.FileSets.ReplaceEmbeddedByPhysical<LoggingManagementSampleWebModule>(hostingEnvironment.ContentRootPath);
+                    
+                    options.FileSets.ReplaceEmbeddedByPhysical<LoggingManagementApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}src{Path.DirectorySeparatorChar}EasyAbp.LoggingManagement.Application.Contracts"));
+                    options.FileSets.ReplaceEmbeddedByPhysical<LoggingManagementApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}src{Path.DirectorySeparatorChar}EasyAbp.LoggingManagement.Application"));
+                    options.FileSets.ReplaceEmbeddedByPhysical<LoggingManagementWebModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}src{Path.DirectorySeparatorChar}EasyAbp.LoggingManagement.Web"));
+
                 });
             }
         }
