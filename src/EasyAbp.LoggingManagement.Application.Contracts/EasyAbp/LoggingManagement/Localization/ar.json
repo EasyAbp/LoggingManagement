@@ -4,6 +4,7 @@
     "Menu:LoggingManagement": "Logging management",
     "Menu:SystemLogs": "System logs",
     "SystemLog": "System log",
+    "SystemLogLevel": "Level",
     "SystemLogLogName": "Log name",
     "SystemLogLogValue": "Log value",
     "SystemLogTime": "Time",

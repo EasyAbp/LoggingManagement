@@ -19,6 +19,7 @@
 
 <script>
     $(function () {
+        $("#SystemLog_Level").val(currentDetailModalData.level)
         $("#SystemLog_LogName").val(currentDetailModalData.logName)
         $("#SystemLog_LogValue").val(JSON.stringify(JSON.parse(currentDetailModalData.logValue), null, 4))
         $("#SystemLog_Time").val(currentDetailModalData.time)

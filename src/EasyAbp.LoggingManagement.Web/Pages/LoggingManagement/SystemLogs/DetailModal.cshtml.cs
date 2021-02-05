@@ -9,15 +9,5 @@ namespace EasyAbp.LoggingManagement.Web.Pages.LoggingManagement.SystemLogs
     {
         [BindProperty]
         public SystemLogDetailViewModel SystemLog { get; set; }
-
-        public void OnGet(string logName, string logValue, DateTime? time)
-        {
-            SystemLog = new SystemLogDetailViewModel
-            {
-                LogName = logName,
-                LogValue = logValue,
-                Time = time
-            };
-        }
     }
 }

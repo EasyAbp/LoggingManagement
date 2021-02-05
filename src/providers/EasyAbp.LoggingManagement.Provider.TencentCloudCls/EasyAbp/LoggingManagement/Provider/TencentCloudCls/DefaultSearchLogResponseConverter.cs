@@ -20,19 +20,20 @@ namespace EasyAbp.LoggingManagement.Provider.TencentCloudCls
         
         public virtual List<SystemLogDto> ToSystemLogDtoList(SearchLogResponse response)
         {
-            return response.Results.Select(x => new SystemLogDto
-            {
-                LogName = GetLogNameFromTencentClsLogObject(x),
-                LogValue = x.Content,
-                Time = x.Timestamp.IsNullOrEmpty() ? null : DateTime.Parse(x.Timestamp)
-            }).ToList();
+            return response.Results.Select(CreateSystemLogDto).ToList();
         }
 
-        protected virtual string GetLogNameFromTencentClsLogObject(TencentClsLogObject tencentClsLogObject)
+        protected virtual SystemLogDto CreateSystemLogDto(TencentClsLogObject obj)
         {
-            var dict = _jsonSerializer.Deserialize<Dictionary<string, string>>(tencentClsLogObject.Content);
-            
-            return dict.ContainsKey("MessageTemplate") ? dict["MessageTemplate"] : "unknown";
+            var dict = _jsonSerializer.Deserialize<Dictionary<string, string>>(obj.Content);
+
+            return new SystemLogDto
+            {
+                LogName = dict.ContainsKey("MessageTemplate") ? dict["MessageTemplate"] : "unknown",
+                LogValue = obj.Content,
+                Time = obj.Timestamp.IsNullOrEmpty() ? null : DateTime.Parse(obj.Timestamp),
+                Level = dict.ContainsKey("Level") ? dict["Level"] : "unknown"
+            };
         }
     }
 }

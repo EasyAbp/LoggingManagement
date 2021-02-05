@@ -9,5 +9,7 @@ namespace EasyAbp.LoggingManagement.SystemLogs.Dtos
         public string LogValue { get; set; }
         
         public DateTime? Time { get; set; }
+        
+        public string Level { get; set; }
     }
 }

@@ -4,6 +4,7 @@
     "Menu:LoggingManagement": "日誌管理",
     "Menu:SystemLogs": "系統日誌",
     "SystemLog": "系統日誌",
+    "SystemLogLevel": "類型",
     "SystemLogLogName": "名稱",
     "SystemLogLogValue": "內容",
     "SystemLogTime": "時間",

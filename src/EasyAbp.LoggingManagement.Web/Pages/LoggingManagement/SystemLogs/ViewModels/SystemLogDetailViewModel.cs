@@ -7,6 +7,10 @@ namespace EasyAbp.LoggingManagement.Web.Pages.LoggingManagement.SystemLogs.ViewM
     public class SystemLogDetailViewModel
     {
         [DisabledInput]
+        [Display(Name = "SystemLogLevel")]
+        public string Level { get; set; }
+
+        [DisabledInput]
         [Display(Name = "SystemLogLogName")]
         public string LogName { get; set; }
         

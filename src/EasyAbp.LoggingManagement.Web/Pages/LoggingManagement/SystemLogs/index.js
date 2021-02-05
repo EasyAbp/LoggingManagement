@@ -24,6 +24,7 @@ $(function () {
                             {
                                 text: l('Detail'),
                                 action: function (data) {
+                                    currentDetailModalData.level = data.record.level
                                     currentDetailModalData.logName = data.record.logName
                                     currentDetailModalData.logValue = data.record.logValue
                                     currentDetailModalData.time = data.record.time
@@ -34,6 +35,7 @@ $(function () {
                 }
             },
             { data: "time" },
+            { data: "level" },
             { data: "logName" },
         ]
     }));
