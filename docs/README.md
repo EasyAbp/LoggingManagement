@@ -1,7 +1,7 @@
 # LoggingManagement
 
 [![ABP version](https://img.shields.io/badge/dynamic/xml?style=flat-square&color=yellow&label=abp&query=%2F%2FProject%2FPropertyGroup%2FAbpVersion&url=https%3A%2F%2Fraw.githubusercontent.com%2FEasyAbp%2FLoggingManagement%2Fmain%2FDirectory.Build.props)](https://abp.io)
-[![NuGet](https://img.shields.io/nuget/v/EasyAbp.LoggingManagement.Domain.Shared.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.LoggingManagement.Domain.Shared)
+[![NuGet](https://img.shields.io/nuget/v/EasyAbp.LoggingManagement.Application.Contracts.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.LoggingManagement.Application.Contracts)
 [![NuGet Download](https://img.shields.io/nuget/dt/EasyAbp.LoggingManagement.Application.Contracts.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.LoggingManagement.Application.Contracts)
 [![GitHub stars](https://img.shields.io/github/stars/EasyAbp/LoggingManagement?style=social)](https://www.github.com/EasyAbp/LoggingManagement)
 
@@ -50,8 +50,8 @@ We have launched an online demo for this module: [https://logging.samples.easyab
         ```
    You can also use [ABP settings](https://github.com/EasyAbp/LoggingManagement/blob/main/src/providers/EasyAbp.LoggingManagement.Provider.TencentCloudCls/EasyAbp/LoggingManagement/Provider/TencentCloudCls/Settings/LoggingManagementTencentCloudClsSettingDefinitionProvider.cs) to control the values of the above options. We recommend to you a great tool module to manage settings: [Abp.SettingUI](https://easyabp.io/modules/Abp.SettingUi).
 
-![Index](/docs/images/Index.png)
-![Detail](/docs/images/Detail.png)
+![Index](/docs/images/Index.jpeg)
+![Detail](/docs/images/Detail.jpeg)
 
 ## Road map
 
