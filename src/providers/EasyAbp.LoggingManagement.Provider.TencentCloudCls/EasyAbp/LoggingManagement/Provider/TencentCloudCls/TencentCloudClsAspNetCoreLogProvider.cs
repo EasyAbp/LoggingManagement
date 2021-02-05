@@ -52,13 +52,11 @@ namespace EasyAbp.LoggingManagement.Provider.TencentCloudCls
                 SecretKey = secretKey
             };
 
-            var dtos = await InternalGetListAsync(logSetId, topicId, startTime, endTime, queryString, endpoint,
+            return await InternalGetListAsync(logSetId, topicId, startTime, endTime, queryString, endpoint,
                 commonOptions, maxResultCount, skipCount);
-            
-            return new PagedResultDto<SystemLogDto>(dtos.Count, dtos);
         }
 
-        protected virtual async Task<List<SystemLogDto>> InternalGetListAsync(string logSetId, string topicId, DateTime startTime,
+        protected virtual async Task<PagedResultDto<SystemLogDto>> InternalGetListAsync(string logSetId, string topicId, DateTime startTime,
             DateTime endTime, string queryString, string endpoint, AbpTencentCloudCommonOptions options,
             int maxResultCount, int skipCount)
         {
@@ -79,7 +77,7 @@ namespace EasyAbp.LoggingManagement.Provider.TencentCloudCls
             } while (response != null && !response.Listover && response.Results.Count > 0 &&
                      dtos.Count < maxResultCount + skipCount && possibleCount < 10000);
 
-            return dtos.Skip(skipCount).Take(maxResultCount).ToList();
+            return new PagedResultDto<SystemLogDto>(10000, dtos.Skip(skipCount).Take(maxResultCount).ToList());
         }
 
         protected virtual string GetEndPoint([NotNull] string region, bool isIntranet)
