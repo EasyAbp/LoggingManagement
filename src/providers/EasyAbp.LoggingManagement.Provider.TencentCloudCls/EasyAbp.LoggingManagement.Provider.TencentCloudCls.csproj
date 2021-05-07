@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="EasyAbp.Abp.TencentCloud.Cls" Version="1.6.3" />
+    <PackageReference Include="EasyAbp.Abp.TencentCloud.Cls" Version="$(EasyAbpAbpTencentCloudModuleVersion)" />
   </ItemGroup>
 
 </Project>
