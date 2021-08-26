@@ -7,7 +7,7 @@ namespace LoggingManagementSample.DbMigrator
 {
     [DependsOn(
         typeof(AbpAutofacModule),
-        typeof(LoggingManagementSampleEntityFrameworkCoreDbMigrationsModule),
+        typeof(LoggingManagementSampleEntityFrameworkCoreModule),
         typeof(LoggingManagementSampleApplicationContractsModule)
         )]
     public class LoggingManagementSampleDbMigratorModule : AbpModule

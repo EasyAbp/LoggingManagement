@@ -45,8 +45,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingManagementSample.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingManagementSample.EntityFrameworkCore", "samples\LoggingManagementSample\src\LoggingManagementSample.EntityFrameworkCore\LoggingManagementSample.EntityFrameworkCore.csproj", "{260FF2BB-37D6-4C49-871E-BE45C50C8B29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingManagementSample.EntityFrameworkCore.DbMigrations", "samples\LoggingManagementSample\src\LoggingManagementSample.EntityFrameworkCore.DbMigrations\LoggingManagementSample.EntityFrameworkCore.DbMigrations.csproj", "{73BE4285-25E9-4010-8ACC-08832BFD5A9C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingManagementSample.HttpApi", "samples\LoggingManagementSample\src\LoggingManagementSample.HttpApi\LoggingManagementSample.HttpApi.csproj", "{2A565AF7-E8FE-4781-AD8E-6EF5654C9AF3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingManagementSample.HttpApi.Client", "samples\LoggingManagementSample\src\LoggingManagementSample.HttpApi.Client\LoggingManagementSample.HttpApi.Client.csproj", "{ABF780BE-516D-495D-B969-A0F582D0C025}"
@@ -137,10 +135,6 @@ Global
 		{260FF2BB-37D6-4C49-871E-BE45C50C8B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{260FF2BB-37D6-4C49-871E-BE45C50C8B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{260FF2BB-37D6-4C49-871E-BE45C50C8B29}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73BE4285-25E9-4010-8ACC-08832BFD5A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73BE4285-25E9-4010-8ACC-08832BFD5A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73BE4285-25E9-4010-8ACC-08832BFD5A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73BE4285-25E9-4010-8ACC-08832BFD5A9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2A565AF7-E8FE-4781-AD8E-6EF5654C9AF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2A565AF7-E8FE-4781-AD8E-6EF5654C9AF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A565AF7-E8FE-4781-AD8E-6EF5654C9AF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -204,7 +198,6 @@ Global
 		{28A03FD5-1B56-404F-89AF-A19E4FF94245} = {AB58A30D-7132-42D7-BDF4-3BBE6B18E8DC}
 		{792C5D04-7563-4015-9DDF-63691FB41D70} = {AB58A30D-7132-42D7-BDF4-3BBE6B18E8DC}
 		{260FF2BB-37D6-4C49-871E-BE45C50C8B29} = {AB58A30D-7132-42D7-BDF4-3BBE6B18E8DC}
-		{73BE4285-25E9-4010-8ACC-08832BFD5A9C} = {AB58A30D-7132-42D7-BDF4-3BBE6B18E8DC}
 		{2A565AF7-E8FE-4781-AD8E-6EF5654C9AF3} = {AB58A30D-7132-42D7-BDF4-3BBE6B18E8DC}
 		{ABF780BE-516D-495D-B969-A0F582D0C025} = {AB58A30D-7132-42D7-BDF4-3BBE6B18E8DC}
 		{0D1ECB82-B760-43F8-851A-F111F211CBD1} = {AB58A30D-7132-42D7-BDF4-3BBE6B18E8DC}

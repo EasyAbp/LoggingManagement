@@ -7,18 +7,18 @@ namespace LoggingManagementSample.EntityFrameworkCore
 {
     /* This class is needed for EF Core console commands
      * (like Add-Migration and Update-Database commands) */
-    public class LoggingManagementSampleMigrationsDbContextFactory : IDesignTimeDbContextFactory<LoggingManagementSampleMigrationsDbContext>
+    public class LoggingManagementSampleDbContextFactory : IDesignTimeDbContextFactory<LoggingManagementSampleDbContext>
     {
-        public LoggingManagementSampleMigrationsDbContext CreateDbContext(string[] args)
+        public LoggingManagementSampleDbContext CreateDbContext(string[] args)
         {
             LoggingManagementSampleEfCoreEntityExtensionMappings.Configure();
 
             var configuration = BuildConfiguration();
 
-            var builder = new DbContextOptionsBuilder<LoggingManagementSampleMigrationsDbContext>()
+            var builder = new DbContextOptionsBuilder<LoggingManagementSampleDbContext>()
                 .UseSqlServer(configuration.GetConnectionString("Default"));
 
-            return new LoggingManagementSampleMigrationsDbContext(builder.Options);
+            return new LoggingManagementSampleDbContext(builder.Options);
         }
 
         private static IConfigurationRoot BuildConfiguration()

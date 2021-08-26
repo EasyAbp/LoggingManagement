@@ -46,7 +46,7 @@ namespace LoggingManagementSample.Web
     [DependsOn(
         typeof(LoggingManagementSampleHttpApiModule),
         typeof(LoggingManagementSampleApplicationModule),
-        typeof(LoggingManagementSampleEntityFrameworkCoreDbMigrationsModule),
+        typeof(LoggingManagementSampleEntityFrameworkCoreModule),
         typeof(AbpAutofacModule),
         typeof(AbpIdentityWebModule),
         typeof(AbpAccountWebIdentityServerModule),

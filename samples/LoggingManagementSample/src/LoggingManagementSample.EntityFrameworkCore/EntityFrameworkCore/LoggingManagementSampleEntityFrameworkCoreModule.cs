@@ -44,7 +44,7 @@ namespace LoggingManagementSample.EntityFrameworkCore
             Configure<AbpDbContextOptions>(options =>
             {
                 /* The main point to change your DBMS.
-                 * See also LoggingManagementSampleMigrationsDbContextFactory for EF Core tooling. */
+                 * See also LoggingManagementSampleDbContextFactory for EF Core tooling. */
                 options.UseSqlServer();
             });
         }

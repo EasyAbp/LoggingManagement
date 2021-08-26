@@ -11,7 +11,7 @@ using Volo.Abp.Modularity;
 namespace LoggingManagementSample.EntityFrameworkCore
 {
     [DependsOn(
-        typeof(LoggingManagementSampleEntityFrameworkCoreDbMigrationsModule),
+        typeof(LoggingManagementSampleEntityFrameworkCoreModule),
         typeof(LoggingManagementSampleTestBaseModule),
         typeof(AbpEntityFrameworkCoreSqliteModule)
         )]
@@ -47,11 +47,11 @@ namespace LoggingManagementSample.EntityFrameworkCore
             var connection = new SqliteConnection("Data Source=:memory:");
             connection.Open();
 
-            var options = new DbContextOptionsBuilder<LoggingManagementSampleMigrationsDbContext>()
+            var options = new DbContextOptionsBuilder<LoggingManagementSampleDbContext>()
                 .UseSqlite(connection)
                 .Options;
 
-            using (var context = new LoggingManagementSampleMigrationsDbContext(options))
+            using (var context = new LoggingManagementSampleDbContext(options))
             {
                 context.GetService<IRelationalDatabaseCreator>().CreateTables();
             }

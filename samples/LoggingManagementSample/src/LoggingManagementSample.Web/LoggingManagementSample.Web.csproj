@@ -41,7 +41,7 @@
     <ProjectReference Include="..\..\..\..\src\providers\EasyAbp.LoggingManagement.Provider.TencentCloudCls\EasyAbp.LoggingManagement.Provider.TencentCloudCls.csproj" />
     <ProjectReference Include="..\LoggingManagementSample.Application\LoggingManagementSample.Application.csproj" />
     <ProjectReference Include="..\LoggingManagementSample.HttpApi\LoggingManagementSample.HttpApi.csproj" />
-    <ProjectReference Include="..\LoggingManagementSample.EntityFrameworkCore.DbMigrations\LoggingManagementSample.EntityFrameworkCore.DbMigrations.csproj" />
+    <ProjectReference Include="..\LoggingManagementSample.EntityFrameworkCore\LoggingManagementSample.EntityFrameworkCore.csproj" />
     <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="$(AbpVersion)" />
     <PackageReference Include="Volo.Abp.Autofac" Version="$(AbpVersion)" />
     <PackageReference Include="Volo.Abp.Swashbuckle" Version="$(AbpVersion)" />
