@@ -5,7 +5,7 @@ namespace LoggingManagementSample.Controllers
 {
     /* Inherit your controllers from this class.
      */
-    public abstract class LoggingManagementSampleController : AbpController
+    public abstract class LoggingManagementSampleController : AbpControllerBase
     {
         protected LoggingManagementSampleController()
         {

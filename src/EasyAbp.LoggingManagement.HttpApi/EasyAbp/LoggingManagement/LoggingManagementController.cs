@@ -1,9 +1,11 @@
 ﻿using EasyAbp.LoggingManagement.Localization;
+using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
 namespace EasyAbp.LoggingManagement
 {
-    public abstract class LoggingManagementController : AbpController
+    [Area(LoggingManagementRemoteServiceConsts.ModuleName)]
+    public abstract class LoggingManagementController : AbpControllerBase
     {
         protected LoggingManagementController()
         {

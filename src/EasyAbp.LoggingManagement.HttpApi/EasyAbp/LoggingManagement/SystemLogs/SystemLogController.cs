@@ -6,8 +6,8 @@ using Volo.Abp.Application.Dtos;
 
 namespace EasyAbp.LoggingManagement.SystemLogs
 {
-    [RemoteService(Name = "EasyAbpLoggingManagement")]
-    [Microsoft.AspNetCore.Components.Route("/api/logging-management/system-log")]
+    [RemoteService(Name = LoggingManagementRemoteServiceConsts.RemoteServiceName)]
+    [Route("/api/logging-management/system-log")]
     public class SystemLogController : LoggingManagementController, ISystemLogAppService
     {
         private readonly ISystemLogAppService _service;

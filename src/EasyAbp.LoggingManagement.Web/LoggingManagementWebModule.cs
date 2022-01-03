@@ -13,7 +13,7 @@ using EasyAbp.LoggingManagement.Permissions;
 namespace EasyAbp.LoggingManagement.Web
 {
     [DependsOn(
-        typeof(LoggingManagementHttpApiModule),
+        typeof(LoggingManagementApplicationContractsModule),
         typeof(AbpAspNetCoreMvcUiThemeSharedModule),
         typeof(AbpAutoMapperModule)
         )]
