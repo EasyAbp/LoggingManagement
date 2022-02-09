@@ -27,7 +27,7 @@ namespace LoggingManagementSample
         {
             context.Services.PreConfigure<IMvcBuilder>(builder =>
             {
-                builder.PartManager.ApplicationParts.Add(new AssemblyPart(typeof(LoggingManagementSampleWebModule).Assembly));
+                builder.PartManager.ApplicationParts.Add(new CompiledRazorAssemblyPart(typeof(LoggingManagementSampleWebModule).Assembly));
             });
         }
 

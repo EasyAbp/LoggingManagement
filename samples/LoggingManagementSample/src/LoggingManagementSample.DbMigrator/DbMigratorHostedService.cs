@@ -19,20 +19,20 @@ namespace LoggingManagementSample.DbMigrator
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            using (var application = AbpApplicationFactory.Create<LoggingManagementSampleDbMigratorModule>(options =>
+            using (var application = await AbpApplicationFactory.CreateAsync<LoggingManagementSampleDbMigratorModule>(options =>
             {
                 options.UseAutofac();
                 options.Services.AddLogging(c => c.AddSerilog());
             }))
             {
-                application.Initialize();
+                await application.InitializeAsync();
 
                 await application
                     .ServiceProvider
                     .GetRequiredService<LoggingManagementSampleDbMigrationService>()
                     .MigrateAsync();
 
-                application.Shutdown();
+                await application.ShutdownAsync();
 
                 _hostApplicationLifetime.StopApplication();
             }
