@@ -9,10 +9,6 @@
 
 An abp application module to help you query and manage your application logs.
 
-## Online Demo
-
-We have launched an online demo for this module: [https://logging.samples.easyabp.io](https://logging.samples.easyabp.io)
-
 ## Installation
 
 1. Install the following NuGet packages. ([see how](https://github.com/EasyAbp/EasyAbpGuide/blob/master/docs/How-To.md#add-nuget-packages))
