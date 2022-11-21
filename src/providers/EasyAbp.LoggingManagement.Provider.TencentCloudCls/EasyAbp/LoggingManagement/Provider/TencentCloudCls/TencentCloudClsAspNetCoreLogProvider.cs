@@ -20,7 +20,7 @@ namespace EasyAbp.LoggingManagement.Provider.TencentCloudCls
     public class TencentCloudClsAspNetCoreLogProvider : IAspNetCoreLogProvider
     {
         private const int Limit = 100;
-        
+
         private readonly ISettingProvider _settingProvider;
         private readonly ITencentCloudApiRequester _tencentCloudApiRequester;
         private readonly ISearchLogResponseConverter _searchLogResponseConverter;
@@ -34,7 +34,7 @@ namespace EasyAbp.LoggingManagement.Provider.TencentCloudCls
             _tencentCloudApiRequester = tencentCloudApiRequester;
             _searchLogResponseConverter = searchLogResponseConverter;
         }
-        
+
         public virtual async Task<PagedResultDto<SystemLogDto>> GetListAsync(string queryString, DateTime startTime,
             DateTime endTime, int maxResultCount, int skipCount)
         {
@@ -56,7 +56,8 @@ namespace EasyAbp.LoggingManagement.Provider.TencentCloudCls
                 commonOptions, maxResultCount, skipCount);
         }
 
-        protected virtual async Task<PagedResultDto<SystemLogDto>> InternalGetListAsync(string logSetId, string topicId, DateTime startTime,
+        protected virtual async Task<PagedResultDto<SystemLogDto>> InternalGetListAsync(string logSetId, string topicId,
+            DateTime startTime,
             DateTime endTime, string queryString, string endpoint, AbpTencentCloudCommonOptions options,
             int maxResultCount, int skipCount)
         {
@@ -73,11 +74,12 @@ namespace EasyAbp.LoggingManagement.Provider.TencentCloudCls
                 dtos.AddRange(_searchLogResponseConverter.ToSystemLogDtoList(response));
 
                 possibleCount += Limit;
-
             } while (response != null && !response.Listover && response.Results.Count > 0 &&
                      dtos.Count < maxResultCount + skipCount && possibleCount < 10000);
 
-            return new PagedResultDto<SystemLogDto>(10000, dtos.Skip(skipCount).Take(maxResultCount).ToList());
+            var list = dtos.Skip(skipCount).Take(maxResultCount).ToList();
+
+            return new PagedResultDto<SystemLogDto>(list.Count, list);
         }
 
         protected virtual string GetEndPoint([NotNull] string region, bool isIntranet)
