@@ -22,7 +22,8 @@ namespace EasyAbp.LoggingManagement.Web.Menus
 
             var l = context.GetLocalizer<LoggingManagementResource>();
 
-            var loggingManagementMenuItem = new ApplicationMenuItem(LoggingManagementMenus.Prefix, l["Menu:LoggingManagement"]);
+            var loggingManagementMenuItem = new ApplicationMenuItem(LoggingManagementMenus.Prefix,
+                l["Menu:LoggingManagement"], icon: "fa fa-file-medical-alt");
 
             if (await context.IsGrantedAsync(LoggingManagementPermissions.SystemLog.Default))
             {
@@ -33,7 +34,7 @@ namespace EasyAbp.LoggingManagement.Web.Menus
             
             if (!loggingManagementMenuItem.Items.IsNullOrEmpty())
             {
-                context.Menu.Items.Add(loggingManagementMenuItem);
+                context.Menu.GetAdministration().Items.Add(loggingManagementMenuItem);
             }
         }
     }
