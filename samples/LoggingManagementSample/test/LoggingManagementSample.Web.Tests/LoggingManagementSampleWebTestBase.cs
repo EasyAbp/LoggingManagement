@@ -8,15 +8,8 @@ using Volo.Abp.AspNetCore.TestBase;
 
 namespace LoggingManagementSample
 {
-    public abstract class LoggingManagementSampleWebTestBase : AbpAspNetCoreIntegratedTestBase<LoggingManagementSampleWebTestStartup>
+    public abstract class LoggingManagementSampleWebTestBase : AbpWebApplicationFactoryIntegratedTest<LoggingManagementSampleWebTestStartup>
     {
-        protected override IHostBuilder CreateHostBuilder()
-        {
-            return base
-                .CreateHostBuilder()
-                .UseContentRoot(WebContentDirectoryFinder.CalculateContentRootFolder());
-        }
-
         protected virtual async Task<T> GetResponseAsObjectAsync<T>(string url, HttpStatusCode expectedStatusCode = HttpStatusCode.OK)
         {
             var strResponse = await GetResponseAsStringAsync(url, expectedStatusCode);
