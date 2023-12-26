@@ -8,7 +8,7 @@ using Volo.Abp.AspNetCore.TestBase;
 
 namespace LoggingManagementSample
 {
-    public abstract class LoggingManagementSampleWebTestBase : AbpWebApplicationFactoryIntegratedTest<LoggingManagementSampleWebTestStartup>
+    public abstract class LoggingManagementSampleWebTestBase : AbpWebApplicationFactoryIntegratedTest<Program>
     {
         protected virtual async Task<T> GetResponseAsObjectAsync<T>(string url, HttpStatusCode expectedStatusCode = HttpStatusCode.OK)
         {
