@@ -184,7 +184,7 @@ namespace LoggingManagementSample.Web
 
         private void ConfigureAutoApiControllers()
         {
-            Configure<AbpAspNetCoreMvcOptions>(options =>
+            PreConfigure<AbpAspNetCoreMvcOptions>(options =>
             {
                 options.ConventionalControllers.Create(typeof(LoggingManagementSampleApplicationModule).Assembly);
             });
