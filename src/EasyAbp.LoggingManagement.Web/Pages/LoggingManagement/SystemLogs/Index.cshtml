@@ -7,8 +7,8 @@
 @inject IPageLayout PageLayout
 @inject IHtmlLocalizer<LoggingManagementResource> L
 @{
-    PageLayout.Content.Title = L["SystemLog"].Value;
-    PageLayout.Content.BreadCrumb.Add(L["Menu:SystemLogs"].Value);
+    PageLayout.Content.Title = L["Menu:SystemLog"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:LoggingManagement"].Value);
     PageLayout.Content.MenuItemName = LoggingManagementMenus.SystemLogs;
 }
 
@@ -34,13 +34,6 @@
 </script>
 
 <abp-card>
-    <abp-card-header>
-        <abp-row>
-            <abp-column size-md="_6">
-                <abp-card-title>@L["SystemLog"]</abp-card-title>
-            </abp-column>
-        </abp-row>
-    </abp-card-header>
     <abp-card-body>
         <abp-card-body>
             <form data-ajaxForm="true" asp-page="Index">
