@@ -8,7 +8,7 @@ using Volo.Abp.Application.Services;
 namespace EasyAbp.LoggingManagement.SystemLogs
 {
     [Authorize(LoggingManagementPermissions.SystemLog.Default)]
-    public class SystemLogAppService : ApplicationService, ISystemLogAppService
+    public class SystemLogAppService : LoggingManagementAppService, ISystemLogAppService
     {
         private readonly IAspNetCoreLogProvider _aspNetCoreLogProvider;
 
