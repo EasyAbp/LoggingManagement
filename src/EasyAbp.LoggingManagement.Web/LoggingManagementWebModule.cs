@@ -4,7 +4,7 @@ using EasyAbp.LoggingManagement.Localization;
 using EasyAbp.LoggingManagement.Web.Menus;
 using Volo.Abp.AspNetCore.Mvc.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
-using Volo.Abp.AutoMapper;
+using Volo.Abp.Mapperly;
 using Volo.Abp.Modularity;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
@@ -15,7 +15,7 @@ namespace EasyAbp.LoggingManagement.Web
     [DependsOn(
         typeof(LoggingManagementApplicationContractsModule),
         typeof(AbpAspNetCoreMvcUiThemeSharedModule),
-        typeof(AbpAutoMapperModule)
+        typeof(AbpMapperlyModule)
         )]
     public class LoggingManagementWebModule : AbpModule
     {
@@ -44,11 +44,7 @@ namespace EasyAbp.LoggingManagement.Web
                 options.FileSets.AddEmbedded<LoggingManagementWebModule>();
             });
 
-            context.Services.AddAutoMapperObjectMapper<LoggingManagementWebModule>();
-            Configure<AbpAutoMapperOptions>(options =>
-            {
-                options.AddMaps<LoggingManagementWebModule>(validate: true);
-            });
+            context.Services.AddMapperlyObjectMapper<LoggingManagementWebModule>();
 
             Configure<RazorPagesOptions>(options =>
             {
